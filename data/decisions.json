@@ -1,0 +1,32 @@
+[
+    {
+        "suggestion_id": "AI-SEC-001",
+        "category": "Security",
+        "risk": "High",
+        "title": "Expired sessions may still be accepted",
+        "human_decision": "Accepted",
+        "justification": "A sugestão foi aceite porque a função validate_session não verifica a expiração da sessão, o que pode permitir acesso indevido a utilizadores com tokens expirados.",
+        "responsible": "Guilherme Vicente",
+        "human_validation_required": true
+    },
+    {
+        "suggestion_id": "AI-AUTH-002",
+        "category": "Authorization",
+        "risk": "Medium",
+        "title": "Admin user receives permissions automatically",
+        "human_decision": "Partially accepted",
+        "justification": "A sugestão foi parcialmente aceite porque o comportamento do administrador pode ser intencional, mas deve ser documentado e revisto em termos de segurança.",
+        "responsible": "Guilherme Vicente",
+        "human_validation_required": true
+    },
+    {
+        "suggestion_id": "AI-REL-003",
+        "category": "Reliability",
+        "risk": "Medium",
+        "title": "Session token is predictable",
+        "human_decision": "Accepted",
+        "justification": "A sugestão foi aceite porque tokens previsíveis reduzem a segurança e podem causar problemas se existirem múltiplas sessões para o mesmo utilizador.",
+        "responsible": "Guilherme Vicente",
+        "human_validation_required": true
+    }
+]

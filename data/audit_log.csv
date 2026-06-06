@@ -1,0 +1,4 @@
+timestamp,suggestion_id,category,risk,title,human_decision,justification,responsible,human_validation_required
+2026-06-06T01:53:30,AI-SEC-001,Security,High,Expired sessions may still be accepted,Accepted,"A sugestão foi aceite porque a função validate_session não verifica a expiração da sessão, o que pode permitir acesso indevido a utilizadores com tokens expirados.",Guilherme Vicente,True
+2026-06-06T01:53:51,AI-AUTH-002,Authorization,Medium,Admin user receives permissions automatically,Partially accepted,"A sugestão foi parcialmente aceite porque o comportamento do administrador pode ser intencional, mas deve ser documentado e revisto em termos de segurança.",Guilherme Vicente,True
+2026-06-06T01:54:05,AI-REL-003,Reliability,Medium,Session token is predictable,Accepted,A sugestão foi aceite porque tokens previsíveis reduzem a segurança e podem causar problemas se existirem múltiplas sessões para o mesmo utilizador.,Guilherme Vicente,True
