@@ -1,9 +1,12 @@
+from datetime import datetime, timedelta
+
 from sample_project.auth import (
     login,
     logout,
     validate_session,
     has_permission,
-    reset_sessions
+    reset_sessions,
+    SESSIONS
 )
 
 
@@ -37,3 +40,9 @@ def test_regular_user_has_read_permission():
 
 def test_regular_user_does_not_have_delete_permission():
     assert has_permission("user", "delete") is False
+
+def test_expired_session_is_invalid():
+    token = login("admin", "admin123")
+    SESSIONS[token]["expires_at"] = datetime.now() - timedelta(minutes=1)
+
+    assert validate_session(token) is False

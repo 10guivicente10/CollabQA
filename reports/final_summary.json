@@ -1,0 +1,16 @@
+{
+    "ai_suggestions": 3,
+    "human_validated_suggestions": 3,
+    "accepted_suggestions": 2,
+    "partially_accepted_suggestions": 1,
+    "rejected_suggestions": 0,
+    "high_risk_suggestions": 1,
+    "test_suggestions": 3,
+    "high_priority_test_suggestions": 1,
+    "audit_log_entries": 3,
+    "failing_stage_failed_tests": 1,
+    "failing_stage_passed_tests": 5,
+    "passing_stage_failed_tests": 0,
+    "passing_stage_passed_tests": 6,
+    "coverage_after_fix_percent": 93
+}

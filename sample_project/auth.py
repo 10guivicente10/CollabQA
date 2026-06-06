@@ -62,13 +62,18 @@ def logout(token):
 
 def validate_session(token):
     """
-    Validates if a session token exists.
+    Validates if a session token exists and has not expired.
 
-    Intentional defect:
-    This function only checks if the token exists, but it does not verify
-    if the session has expired.
+    A session is only valid if:
+    - the token exists;
+    - the expiration date is still in the future.
     """
-    return token in SESSIONS
+    session = SESSIONS.get(token)
+
+    if session is None:
+        return False
+
+    return datetime.now() < session["expires_at"]
 
 
 def has_permission(username, permission):

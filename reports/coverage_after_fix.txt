@@ -1,0 +1,8 @@
+Name                                Stmts   Miss  Cover
+-------------------------------------------------------
+sample_project/__init__.py              0      0   100%
+sample_project/auth.py                 31      4    87%
+sample_project/tests/__init__.py        0      0   100%
+sample_project/tests/test_auth.py      23      0   100%
+-------------------------------------------------------
+TOTAL                                  54      4    93%

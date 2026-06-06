@@ -1,0 +1,29 @@
+[
+    {
+        "id": "TEST-SEC-001",
+        "related_suggestion": "AI-SEC-001",
+        "title": "Expired session should be rejected",
+        "purpose": "Verify that validate_session returns False when the token exists but the session expiration date is in the past.",
+        "risk_addressed": "Expired sessions may still be accepted",
+        "priority": "High",
+        "test_code": "\ndef test_expired_session_is_invalid():\n    token = login(\"admin\", \"admin123\")\n    SESSIONS[token][\"expires_at\"] = datetime.now() - timedelta(minutes=1)\n\n    assert validate_session(token) is False\n"
+    },
+    {
+        "id": "TEST-AUTH-002",
+        "related_suggestion": "AI-AUTH-002",
+        "title": "Admin permission behaviour should be explicit",
+        "purpose": "Verify and document the current behaviour where the admin user automatically receives permissions.",
+        "risk_addressed": "Admin user receives permissions automatically",
+        "priority": "Medium",
+        "test_code": "\ndef test_admin_has_delete_permission_by_policy():\n    assert has_permission(\"admin\", \"delete\") is True\n"
+    },
+    {
+        "id": "TEST-REL-003",
+        "related_suggestion": "AI-REL-003",
+        "title": "Multiple logins should generate unique tokens",
+        "purpose": "Verify that two login attempts for the same user do not generate the same predictable token.",
+        "risk_addressed": "Session token is predictable",
+        "priority": "Medium",
+        "test_code": "\ndef test_multiple_logins_generate_different_tokens():\n    first_token = login(\"admin\", \"admin123\")\n    second_token = login(\"admin\", \"admin123\")\n\n    assert first_token != second_token\n"
+    }
+]
