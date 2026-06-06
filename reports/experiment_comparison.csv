@@ -1,0 +1,4 @@
+mode,relevant_problems_found,false_positives,useful_tests_suggested,human_validated_decisions,audit_log_entries,notes
+Human alone,1,0,1,1,0,"Manual review identified the expired session issue after inspecting validate_session, but did not provide structured traceability."
+AI alone,3,0,3,0,0,"AI review identified three relevant risks, but did not provide accountability or final validation."
+Human + AI,3,0,3,3,3,"AI suggestions were reviewed by a human. Two were accepted and one was partially accepted, with justification and audit log entries."

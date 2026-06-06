@@ -1,0 +1,36 @@
+{
+    "results": [
+        {
+            "mode": "Human alone",
+            "relevant_problems_found": 1,
+            "false_positives": 0,
+            "useful_tests_suggested": 1,
+            "human_validated_decisions": 1,
+            "audit_log_entries": 0,
+            "notes": "Manual review identified the expired session issue after inspecting validate_session, but did not provide structured traceability."
+        },
+        {
+            "mode": "AI alone",
+            "relevant_problems_found": 3,
+            "false_positives": 0,
+            "useful_tests_suggested": 3,
+            "human_validated_decisions": 0,
+            "audit_log_entries": 0,
+            "notes": "AI review identified three relevant risks, but did not provide accountability or final validation."
+        },
+        {
+            "mode": "Human + AI",
+            "relevant_problems_found": 3,
+            "false_positives": 0,
+            "useful_tests_suggested": 3,
+            "human_validated_decisions": 3,
+            "audit_log_entries": 3,
+            "notes": "AI suggestions were reviewed by a human. Two were accepted and one was partially accepted, with justification and audit log entries."
+        }
+    ],
+    "best_mode": {
+        "best_mode": "Human + AI",
+        "score": 27,
+        "reason": "This mode achieved the best balance between relevant findings, useful test suggestions, human validation and traceability."
+    }
+}
