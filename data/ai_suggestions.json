@@ -1,0 +1,42 @@
+[
+    {
+        "id": "AI-SEC-001",
+        "category": "Security",
+        "risk": "High",
+        "title": "Expired sessions may still be accepted",
+        "description": "The validate_session function only checks if the token exists in the active sessions dictionary. It does not verify whether the session has expired.",
+        "recommendation": "Update validate_session to check the expires_at timestamp before accepting a session as valid.",
+        "affected_quality_attributes": [
+            "Security",
+            "Reliability",
+            "Correctness"
+        ],
+        "human_validation_required": true
+    },
+    {
+        "id": "AI-AUTH-002",
+        "category": "Authorization",
+        "risk": "Medium",
+        "title": "Admin user receives permissions automatically",
+        "description": "The has_permission function gives all permissions to the admin user without checking the configured permission list.",
+        "recommendation": "Validate admin permissions explicitly or document this behaviour as an intentional policy decision.",
+        "affected_quality_attributes": [
+            "Security",
+            "Maintainability"
+        ],
+        "human_validation_required": true
+    },
+    {
+        "id": "AI-REL-003",
+        "category": "Reliability",
+        "risk": "Medium",
+        "title": "Session token is predictable",
+        "description": "The session token is generated directly from the username. This can overwrite previous sessions and is not suitable for real authentication scenarios.",
+        "recommendation": "Use a random and unique token generation mechanism, such as the secrets module.",
+        "affected_quality_attributes": [
+            "Security",
+            "Reliability"
+        ],
+        "human_validation_required": true
+    }
+]
