@@ -1,0 +1,2 @@
+mode,relevant_problems_found,false_positives,useful_tests_suggested,human_validated_decisions,audit_log_entries,notes
+Human alone,1,0,1,1,0,"Manual review identified the expired session issue after inspecting validate_session, but did not provide structured traceability."

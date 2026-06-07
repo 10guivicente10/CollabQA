@@ -1,0 +1,2 @@
+mode,relevant_problems_found,false_positives,useful_tests_suggested,human_validated_decisions,audit_log_entries,notes
+AI alone,3,0,3,0,0,"AI review identified three relevant risks, but did not provide accountability or final validation."
