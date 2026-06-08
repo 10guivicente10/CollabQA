@@ -5,7 +5,7 @@
         "risk": "High",
         "title": "Expired sessions may still be accepted",
         "human_decision": "Accepted",
-        "justification": "A sugestão foi aceite porque a função validate_session não verifica a expiração da sessão, o que pode permitir acesso indevido a utilizadores com tokens expirados.",
+        "justification": "A sugestão foi aceite porque a função validate_session não verifica a expiração da sessão, o que pode permitir acesso indevido com tokens expirados.",
         "responsible": "Guilherme Vicente",
         "human_validation_required": true
     },
@@ -15,7 +15,7 @@
         "risk": "Medium",
         "title": "Admin user receives permissions automatically",
         "human_decision": "Partially accepted",
-        "justification": "A sugestão foi parcialmente aceite porque o comportamento do administrador pode ser intencional, mas deve ser documentado e revisto em termos de segurança.",
+        "justification": "O comportamento do administrador pode ser intencional, mas deve ser documentado e revisto por ter impacto em segurança.",
         "responsible": "Guilherme Vicente",
         "human_validation_required": true
     },
@@ -25,7 +25,7 @@
         "risk": "Medium",
         "title": "Session token is predictable",
         "human_decision": "Accepted",
-        "justification": "A sugestão foi aceite porque tokens previsíveis reduzem a segurança e podem causar problemas se existirem múltiplas sessões para o mesmo utilizador.",
+        "justification": "Tokens previsíveis reduzem a segurança e podem causar problemas em múltiplas sessões do mesmo utilizador.",
         "responsible": "Guilherme Vicente",
         "human_validation_required": true
     }
